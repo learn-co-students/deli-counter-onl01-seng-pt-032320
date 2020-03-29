@@ -3,15 +3,17 @@ katz_deli = []
 
 def line(array)
   count = 0
+  new_array = []
+  while count < array.length
+    new_array.push("#{count+1}. #{array[count]}")
+    count += 1
+  end
   if array.length == 0
     puts "The line is currently empty."
   else
-    puts "The line is currently: #{count+1} #{array[count]}"
-    count += 1
-    while count < array.length
+    puts "The line is currently: #{new_array.join(" ")}"
   end
-end
-
+end 
 
 def take_a_number(array, name)
   array.push(name)
