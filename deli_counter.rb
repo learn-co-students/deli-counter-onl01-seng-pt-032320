@@ -1,15 +1,12 @@
 
-def line(array)
-  if array.length > 0 
+def line(katz_deli)
+  if katz_deli.length > 0 
     line_array = []
-    line_number = 1
-    array.each do |person|
-      line_array.push("#{line_number}. #{person}") 
-      line_number += 1
-    end
+    katz_deli.each_with_index{|person, index|
+      line_array.push("#{index + 1}. #{person}")}
     puts "The line is currently: #{line_array.join(" ")}"
   else 
-    puts "The line is currently empty."
+    puts "The line is currently empty." 
   end
 end
 
